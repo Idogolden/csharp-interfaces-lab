@@ -50,10 +50,9 @@ public class Drone : Device, IChargeable
     {
         return battery;
     }
-    public static int SetBattery(int battery)
+    static void 
     {
-        if (0<battery<100)
-            return battery;
+        IFlyable (battery)
     }
 }
 
