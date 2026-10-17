@@ -27,9 +27,38 @@ Drone הוא כלי תחבורה המסוגל לעוף. כדי להפעיל או
 מחזירות ערך. ההודעות ואחוז הסוללה מאפשרים לעקוב אחר הפעולות.
 */
 
-public class Drone
+using System;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+
+public class Drone : Device, IChargeable
 {
+    private string name;
+    private int battery;
+   public void Charge()
+    {
+        Console.WriteLine("Chraging drone");
+    }
+
+    public  Drone(string Name, int Battery)
+    {
+        name = Name;
+        battery = Battery;
+    }
+    public static string Name{ get; set; }
+    public static int GetBattery(int battery) 
+    {
+        return battery;
+    }
+    public static int SetBattery(int battery)
+    {
+        if (0<battery<100)
+            return battery;
+    }
 }
+
+
+
 
 /*
 משימה 2 — שילוב הרחפן בקוד הקיים ובדיקת הרצה

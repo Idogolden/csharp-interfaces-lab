@@ -10,9 +10,9 @@ public class Program
         {
             new Bird(),
             new Airplane(),
-            new Superman()
-            // משימה 2: הוסיפו גם את ההפניה לרחפן שיצרתם.
-        };
+            new Superman(),
+            new Drone(),
+        }
 
         IChargeable[] devices =
         {
