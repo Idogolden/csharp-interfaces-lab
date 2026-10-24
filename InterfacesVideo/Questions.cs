@@ -34,7 +34,7 @@ using System.Security.Cryptography.X509Certificates;
 public class Drone : Device, IChargeable
 {
     private string name;
-    private int battery;
+    public int battery;
    public void Charge()
     {
         Console.WriteLine("Chraging drone");
@@ -50,9 +50,17 @@ public class Drone : Device, IChargeable
     {
         return battery;
     }
-    static void 
+    public static int SetBattery(int battery)
     {
-        IFlyable (battery)
+        return battery;
+    }
+    public interface IFlyable
+    {
+        int Getbattery(int battery);
+        string Fly()
+        {
+          if (GetBattery()<10)
+        }
     }
 }
 
